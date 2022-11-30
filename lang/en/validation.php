@@ -172,5 +172,6 @@ return [
     */
 
     'attributes' => [],
-
+    'login_wrong' => 'Username or password incorrect',
+    'something_wrong' => 'Something wrong',
 ];
