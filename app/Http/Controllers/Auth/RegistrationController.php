@@ -21,6 +21,7 @@ class RegistrationController extends Controller
     public function register(RegistationRequest $request): \Illuminate\Http\RedirectResponse
     {
         $data = $request->validated();
+        $data['password'] = \Hash::make($data['password']);
         $user = new User();
         $user->fill($data);
         $user->save();
