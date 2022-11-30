@@ -24,9 +24,6 @@ Route::middleware('guest')->group(function () {
     Route::post('/registration/register', [Auth\RegistrationController::class, 'register'])
         ->name('auth.registration.register');
 });
-Route::get('/test', function () {
-    dd(\App\Models\User::all());
-});
 Route::middleware('auth')->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 
