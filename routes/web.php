@@ -30,6 +30,4 @@ Route::middleware('auth')->group(function () {
     Route::post('/event/create', [EventController::class, 'create'])->name('event.create');
     Route::get('/event/delete', [EventController::class, 'delete'])->name('event.delete');
     Route::get('/event/{event}/modal_info', [EventController::class, 'getModal'])->name('event.getModal');
-
-
 });
